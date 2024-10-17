@@ -22,7 +22,7 @@
 
 ###
 
-<p align="left">Responsive Design: Optimized for both desktop and mobile views.<br>React Components: Modular and reusable components.<br>Interactive UI: Includes animations and interactive elements using React.<br>Smooth Navigation: Seamless transitions between sections of the portfolio.<br>Technologies Used<br>React.js: JavaScript library for building user interfaces.<br>HTML5 & CSS3: Semantic HTML and modern CSS for styling.<br>JavaScript (ES6+): For interactivity and functionality.<br>Git & GitHub: For version control and hosting the project.</p>
+<p align="left">Responsive Design : Optimized for both desktop and mobile views.<br>React Components : Modular and reusable components.<br>Interactive UI : Includes animations and interactive elements using React.<br>Smooth Navigation : Seamless transitions between sections of the portfolio.<br>Technologies Used<br>React.js : JavaScript library for building user interfaces.<br>HTML5 & CSS3 : Semantic HTML and modern CSS for styling.<br>JavaScript (ES6+) : For interactivity and functionality.<br>Tailwind CSS : For styling<br>Git & GitHub : For version control and hosting the project.</p>
 
 ###
 

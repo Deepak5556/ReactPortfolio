@@ -23,7 +23,7 @@ const NavBar = () => {
 
           {/* Button */}
           <div className="hidden md:flex">
-            <button className="px-4 py-2 bg-slate-200 flex items-center gap-2 text-black rounded-lg hover:bg-primary hover:text-white focus:outline-none transition ease-out duration-500">
+            <button className="px-4 py-2 bg-slate-200 t flex items-center gap-2 text-black rounded-lg hover:bg-primary hover:text-white focus:outline-none transition ease-out duration-500">
               Download CV <IoDocument/>
             </button>
           </div>
@@ -69,14 +69,14 @@ const NavBar = () => {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="md:hidden">
-          <ul className="space-y-4 text-center py-4">
-            <li><a href="#home" className="block text-lg">Home</a></li>
-            <li><a href="#about" className="block text-lg">About</a></li>
-            <li><a href="#projects" className="block text-lg">Projects</a></li>
-            <li><a href="#contact" className="block text-lg">Contact</a></li>
+        <div className="md:hidden ">
+          <ul className="space-y-4 text-center py-4 ">
+            <li><a href="#home" className="block text-sm">Home</a></li>
+            <li><a href="#about" className="block text-sm">About</a></li>
+            <li><a href="#projects" className="block text-sm">Projects</a></li>
+            <li><a href="#contact" className="block text-sm">Contact</a></li>
             <li>
-              <button className="px-4 py-1 bg-slate-200 text-black rounded hover:bg-primary hover:text-white focus:outline-none transition ease-out duration-500">
+              <button className="px-2 py-2 text-xs font-medium flex items-center mx-auto bg-slate-200 text-black rounded hover:bg-primary hover:text-white focus:outline-none transition ease-out duration-500">
                 Download CV <IoDocument/>
               </button>
             </li>

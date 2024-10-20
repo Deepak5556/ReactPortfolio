@@ -1,0 +1,5 @@
+.project-box::after {
+    content: "";
+    @apply absolute bottom-[-100%] w-full h-full bg-purple-600 transition-all duration-300 ease-in-out z-[1];
+  }
+  

@@ -1,0 +1,21 @@
+/* General styles for all <li> tags */
+li {
+    background-color: #6724d4;  /* Primary background color */
+    color: white;               /* White text */
+    padding: 2px  8px;           /* Padding: 4px top-bottom, 8px left-right */
+    margin: 2px;                /* Margin around each <li> */
+    display: inline-flex;       /* Inline-flex for better alignment */
+    border-radius: 5px;         /* Rounded corners */
+    font-size: 16px;            /* Optional: Adjust font size */
+    align-items: center; 
+    cursor: pointer;
+           /* Align content vertically */
+  }
+  
+  /* Optional: Add hover effect */
+  li:hover {
+    /* White background on hover */
+    background-color: #6200ff;             /* Primary color for text on hover */
+                /* Pointer cursor on hover */
+  }
+  

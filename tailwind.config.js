@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         poppins: ['"Poppins"', 'sans-serif'], // Adding Rubik font family
       },
+      transitionDuration: {
+        '400': '400ms',
+      },
       fontWeight: {
         594: '594', // Custom font weight
       },

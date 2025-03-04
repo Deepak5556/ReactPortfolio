@@ -1,3 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary: #5a1abf;
+  --secondary: #00B5E7;
+  --dark: #444444;
+  --light: #FAFAFA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-light;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+@layer components {
+  .btn {
+    @apply font-medium py-3 px-5 bg-gray-100 rounded-lg cursor-pointer transition-all duration-300 flex items-center gap-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-opacity-90;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-semibold text-dark mb-2;
+  }
+  
+  .section-subtitle {
+    @apply text-gray-500 mb-12;
+  }
+  
+  .skill-tag {
+    @apply text-sm bg-primary text-white px-3 py-1 rounded-md;
+  }
+  
+  .project-card {
+    @apply bg-white rounded-2xl shadow-md p-8 flex flex-col items-center justify-center h-full relative overflow-hidden transition-all duration-300;
+  }
+  
+  .project-card::after {
+    @apply content-[''] absolute bottom-[-100%] bg-primary w-full h-full transition-all duration-300 z-0;
+  }
+  
+  .project-card:hover::after {
+    @apply bottom-0;
+  }
+  
+  .project-card:hover * {
+    @apply text-white z-10;
+  }
+  
+  .contact-info {
+    @apply bg-primary text-white rounded-xl shadow-md p-8 flex flex-col items-center justify-center relative overflow-hidden transition-all duration-300;
+  }
+  
+  .contact-info::after {
+    @apply content-[''] absolute bottom-[-100%] bg-white w-full h-full transition-all duration-300 z-0;
+  }
+  
+  .contact-info:hover::after {
+    @apply bottom-0;
+  }
+  
+  .contact-info:hover * {
+    @apply text-dark z-10;
+  }
+  
+  .input-field {
+    @apply w-full h-14 bg-transparent border-2 border-gray-300 rounded-lg px-5 outline-none focus:border-primary transition-all duration-300;
+  }
+}

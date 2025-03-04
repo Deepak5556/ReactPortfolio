@@ -1,22 +1,25 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        poppins: ['"Poppins"', 'sans-serif'], // Adding Rubik font family
-      },
-      transitionDuration: {
-        '400': '400ms',
-      },
-      fontWeight: {
-        594: '594', // Custom font weight
-      },
       colors: {
-        primary: '#6724d4', // Primary color
-        backcolor:'#fafafa', //bgcolor
+        primary: '#5a1abf',
+        secondary: '#00B5E7',
+        dark: '#444444',
+        light: '#FAFAFA',
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
+      animation: {
+        float: 'float 7s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)', borderRadius: '55% 45% 55% 45%' },
+          '50%': { transform: 'translateY(10px)', borderRadius: '45% 55% 45% 55%' },
+        },
       },
     },
   },

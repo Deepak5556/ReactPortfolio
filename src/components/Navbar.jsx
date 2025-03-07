@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, FileText } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, FileText } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Navbar = ({ isMenuOpen, toggleMenu }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -16,16 +16,16 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'My Work', path: '/mywork' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Projects", path: "/projects" },
+    // { name: 'My Work', path: '/mywork' },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -34,12 +34,17 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 py-5 px-4 md:px-8 lg:px-16 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="nav-logo">
-          <h1 className="text-2xl md:text-3xl font-semibold text-primary">DΣΣPΛK</h1>
+          <Link
+            to="/"
+            className="text-2xl md:text-3xl font-semibold text-primary"
+          >
+            DΣΣPΛK
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -50,7 +55,9 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
                 <Link
                   to={link.path}
                   className={`text-dark hover:text-primary font-medium cursor-pointer transition-colors ${
-                    location.pathname === link.path ? 'text-primary font-bold' : ''
+                    location.pathname === link.path
+                      ? "text-primary font-bold"
+                      : ""
                   }`}
                 >
                   {link.name}
@@ -58,9 +65,9 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
               </li>
             ))}
           </ul>
-          <a 
-            href="/Resume.pdf" 
-            target="_blank" 
+          <a
+            href="/Resume.pdf"
+            target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary flex items-center space-x-2"
           >
@@ -92,7 +99,9 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
                   to={link.path}
                   onClick={toggleMenu}
                   className={`text-dark hover:text-primary font-medium block py-2 ${
-                    location.pathname === link.path ? 'text-primary font-bold' : ''
+                    location.pathname === link.path
+                      ? "text-primary font-bold"
+                      : ""
                   }`}
                 >
                   {link.name}
@@ -100,9 +109,9 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
               </li>
             ))}
             <li>
-              <a 
-                href="/Resume.pdf" 
-                target="_blank" 
+              <a
+                href="/Resume.pdf"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary inline-block  items-center space-x-2"
               >

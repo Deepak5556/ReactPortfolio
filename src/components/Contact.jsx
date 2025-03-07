@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Swal from 'sweetalert2';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +24,6 @@ const Contact = () => {
     
     const { name, email, message } = formData;
     
-    // Check if any fields are empty
     if (!name || !email || !message) {
       Swal.fire({
         icon: 'error',
@@ -33,7 +33,6 @@ const Contact = () => {
       return;
     }
     
-    // Validate email
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
       Swal.fire({
@@ -43,19 +42,28 @@ const Contact = () => {
       });
       return;
     }
-    
-    // Simulate sending email
-    Swal.fire({
-      icon: 'success',
-      title: 'Message Sent!',
-      text: 'Thank you for your message. I will get back to you soon!',
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
+
+    // Sending email using EmailJS
+    emailjs.send('service_e8xqd4q', 'template_mv7g8br', {
+      from_name: name,
+      from_email: email,
+      message: message
+    }, '5bpfB40U5_MRYFf3D')
+    .then(() => {
+      Swal.fire({
+        icon: 'success',
+        title: 'Message Sent!',
+        text: 'Thank you for your message. I will get back to you soon!',
+      });
+      setFormData({ name: '', email: '', message: '' });
+    })
+    .catch((error) => {
+      console.error('EmailJS Error:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error Sending Message',
+        text: 'Something went wrong. Please try again later.',
+      });
     });
   };
 

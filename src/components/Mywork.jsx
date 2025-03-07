@@ -15,20 +15,33 @@ const MyWork = () => {
           <motion.div whileHover={{ y: -10 }} className="project-card p-8 cursor-pointer">
             <Briefcase size={50} className="text-primary mb-6" />
             <h3 className="text-xl font-semibold text-dark mb-2">Projects</h3>
-            <p className="text-gray-600 text-center">10+ Completed</p>
+
+            {/* <p className="text-gray-600 text-center">Completed</p> */}
+
           </motion.div>
         </Link>
 
         <motion.div whileHover={{ y: -10 }} className="project-card p-8">
           <Users size={50} className="text-primary mb-6" />
           <h3 className="text-xl font-semibold text-dark mb-2">Internships</h3>
-          <p className="text-gray-600 text-center">3+ Companies</p>
+
+
+          {/* <p className="text-gray-600 text-center">Companies</p> */}
+
+
         </motion.div>
 
         <motion.div whileHover={{ y: -10 }} className="project-card p-8">
           <Award size={50} className="text-primary mb-6" />
           <h3 className="text-xl font-semibold text-dark mb-2">Certificates</h3>
-          <p className="text-gray-600 text-center">5+ Certificates</p>
+
+
+          
+          {/* <p className="text-gray-600 text-center">+2</p>   */}
+ 
+          {/* Adding Count in Above Section */}
+
+
         </motion.div>
       </div>
     </div>

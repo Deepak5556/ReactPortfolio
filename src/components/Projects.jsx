@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Briefcase, Users, Award, ExternalLink, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
+import image from '../Assets/image';
 
 const Projects = () => {
   const projects = [
@@ -8,7 +9,7 @@ const Projects = () => {
       "id": 1,
       "title": "kcedhruva",
       "description": "KAT COMMAND team developed kcedhruva.in, the official website for our college's Dhruva event, enhancing user engagement and accessibility. The platform provides event details, schedules, and registration features for participants",
-      "image": "./src/Assets/dhruva.png",
+      "image": image.dhruva,
       "technologies": ["React JS"],
       "liveLink": "https://kcedhruva.in", // Corrected live link
       "githubLink": "https://github.com/Deepak5556/kcedhruva"
@@ -17,7 +18,7 @@ const Projects = () => {
       "id": 2,
       "title": "Cognito",
       "description": "Cognito is a MERN stack-based online learning platform featuring dual logins for teachers and students. It includes course management, live chat, AI-powered assistance, and a personalized dashboard for seamless learning",
-      "image": "./src/Assets/cognito.png",  
+      "image": image.cognito,  
       "technologies": ["MERN Stack"],
       "liveLink": null, // Changed to null to represent no live link
       "githubLink": "https://github.com/Deepak5556/cognito"

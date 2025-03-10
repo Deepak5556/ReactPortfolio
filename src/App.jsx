@@ -6,8 +6,8 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import MyWork from './components/MyWork';
 import { motion } from 'framer-motion';
+import MyWork from './components/Mywork';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +27,7 @@ function App() {
             <Route path="/" element={<>
               <Hero />
               <About />
-              <MyWork />
+              <MyWork/>
               <Contact />
             </>} />
             <Route path="/projects" element={<Projects />} />

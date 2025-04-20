@@ -27,7 +27,7 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
     // { name: "Projects", path: "/projects" },
     // { name: "Certificates", path: "/certificate" },
 
-    { name: 'My Work', path: '/mywork' },
+    { name: "My Work", path: "/mywork" },
     { name: "Contact", path: "/contact" },
   ];
 

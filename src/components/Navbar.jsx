@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, FileText } from "lucide-react";
 import { motion } from "framer-motion";
+import resume from "../Assets/DeepakkumarV.pdf";
 
 const Navbar = ({ isMenuOpen, toggleMenu }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -68,7 +69,7 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
             ))}
           </ul>
           <a
-            href="/Resume.pdf"
+            href={resume}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary flex items-center space-x-2"
@@ -113,7 +114,6 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
             <li>
               <a
                 href="/Resume.pdf"
-                target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary inline-block  items-center space-x-2"
               >

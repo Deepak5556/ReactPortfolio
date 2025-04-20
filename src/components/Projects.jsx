@@ -20,7 +20,7 @@ const Projects = () => {
       id: 2,
       title: "kcedhruva",
       description:
-        "KAT COMMAND team developed kcedhruva.in, the official website for our college's Dhruva event, enhancing user engagement and accessibility. The platform provides event details, schedules, and registration features for participants",
+        "The KAT COMMAND team developed kcedhruva.in, the official website for our college's Dhruva event, improving user engagement and accessibility. It offers event details, schedules, and registration features. I'm proud to be part of this team and contribute to its success.",
       image: image.dhruva,
       technologies: ["React JS"],
       liveLink: "https://kcedhruva.in",
@@ -29,17 +29,6 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "To-Do App",
-      description:
-        "A Flutter-based To-Do App that helps users manage their daily tasks effectively. It features task addition, editing, deletion, and a user-friendly interface to keep track of completed and pending tasks.",
-      image: image.todoApp,
-      technologies: ["Flutter", "Dart"],
-      liveLink: null,
-      githubLink: "https://github.com/Deepak5556/Todo-List-App-Flutter",
-      status: 1,
-    },
-    {
-      id: 4,
       title: "Blood Donation App",
       description:
         "A user-friendly Flutter-based Blood Donation App designed to streamline the process of finding blood donors and requesting donations. The app features donor registration, search for nearby donors, request forms, and emergency contact options for quick assistance.",
@@ -50,7 +39,7 @@ const Projects = () => {
       status: 1,
     },
     {
-      id: 5,
+      id: 4,
       title: "Blood Hub Website",
       description:
         "Blood Hub is a PHP and MySQL-based website developed to understand the basics of backend programming and database management. The platform simplifies the process of finding and connecting with blood donors, featuring donor registration, search functionalities, and donation request forms.",
@@ -60,8 +49,17 @@ const Projects = () => {
       githubLink: "https://github.com/Deepak5556/blood-hub-website",
       status: 1,
     },
-    
-    
+    {
+      id: 5,
+      title: "To-Do App",
+      description:
+        "A Flutter-based To-Do App that helps users manage their daily tasks effectively. It features task addition, editing, deletion, and a user-friendly interface to keep track of completed and pending tasks.",
+      image: image.todoApp,
+      technologies: ["Flutter", "Dart"],
+      liveLink: null,
+      githubLink: "https://github.com/Deepak5556/Todo-List-App-Flutter",
+      status: 1,
+    },
   ];
 
   useEffect(() => {

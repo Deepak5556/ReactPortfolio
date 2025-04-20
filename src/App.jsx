@@ -8,6 +8,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { motion } from 'framer-motion';
 import MyWork from './components/Mywork';
+import Certificate from './components/Certificate';
+import Internship from './components/Internship';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,6 +33,8 @@ function App() {
               <Contact />
             </>} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/certificate" element={<Certificate/>} />
+            <Route path="/internship" element={<Internship/>} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mywork" element={<MyWork />} />

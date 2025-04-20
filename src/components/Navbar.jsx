@@ -23,8 +23,10 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Projects", path: "/projects" },
-    // { name: 'My Work', path: '/mywork' },
+    // { name: "Projects", path: "/projects" },
+    // { name: "Certificates", path: "/certificate" },
+
+    { name: 'My Work', path: '/mywork' },
     { name: "Contact", path: "/contact" },
   ];
 

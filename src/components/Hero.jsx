@@ -1,15 +1,24 @@
-import React from 'react';
-import { TypeAnimation } from 'react-type-animation';
-import { Link } from 'react-scroll';
-import { ChevronDown, Instagram, Linkedin, Github, Dribbble, FileText } from 'lucide-react';
-import { motion } from 'framer-motion';
-import deepak from '../Assets/Deepak.png'
-import resume from '../Assets/DeepakkumarV.pdf'
-
+import React from "react";
+import { TypeAnimation } from "react-type-animation";
+import { Link } from "react-scroll";
+import {
+  ChevronDown,
+  Instagram,
+  Linkedin,
+  Github,
+  Dribbble,
+  FileText,
+} from "lucide-react";
+import { motion } from "framer-motion";
+import deepak from "../Assets/Deepak.png";
+import resume from "../Assets/DeepakkumarV.pdf";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col justify-center pt-16">
+    <section
+      id="home"
+      className="min-h-screen flex flex-col justify-center pt-16"
+    >
       <div className="flex flex-col md:flex-row items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -21,15 +30,14 @@ const Hero = () => {
             <span className="bg-primary text-white text-xs px-3 py-1 rounded-md">Full Stack Developer</span>
           </div> */}
 
-
           <div className="text-xl md:text-2xl font-medium mb-6 h-8">
             <TypeAnimation
               sequence={[
-                'Web Developer',
+                "Web Developer",
                 1500,
-                'UI/UX Designer',
+                "UI/UX Designer",
                 1500,
-                'Full Stack Developer',
+                "Full Stack Developer",
                 1500,
               ]}
               wrapper="span"
@@ -43,31 +51,54 @@ const Hero = () => {
           </h1>
 
           <p className="text-dark mb-8 max-w-lg">
-            This is my official Portfolio website to show all Details and work experience in web development
+            Welcome to my official portfolio website, where you can explore my
+            skills, work experience, and all the details about my journey in web
+            development.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
-            <a href={resume} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
               View Resume <FileText size={18} />
             </a>
             <button
               className="btn"
-              onClick={() => window.open("https://linktr.ee/deepakkumar007", "_blank")}
+              onClick={() =>
+                window.open("https://linktr.ee/deepakkumar007", "_blank")
+              }
             >
               Social Media
             </button>
-
           </div>
 
           <div className="flex gap-6">
-            <a href="https://www.instagram.com/insta_boy_deepak__" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-primary transition-colors">
+            <a
+              href="https://www.instagram.com/insta_boy_deepak__"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-primary transition-colors"
+            >
               <Instagram size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/deepakkumarv5556" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-primary transition-colors">
+            <a
+              href="https://www.linkedin.com/in/deepakkumarv5556"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-primary transition-colors"
+            >
               <Linkedin size={20} />
             </a>
 
-            <a href="https://github.com/Deepak5556" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-primary transition-colors">
+            <a
+              href="https://github.com/Deepak5556"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-primary transition-colors"
+            >
               <Github size={20} />
             </a>
           </div>

@@ -4,6 +4,8 @@ import todoApp from "../Assets/todoApp.png";
 import bloodDonationApp from "../Assets/bloodDonationApp.jpg";
 import bloodHub from "../Assets/bloodHub.jpg";
 import byts from "../Assets/byts.png";
+import weatherapp from "../Assets/weatherapp.png"
+import snaplearn from "../Assets/snaplearn.png"
 const image = {
   dhruva: dhruva,
   cognito: cognito,
@@ -11,5 +13,8 @@ const image = {
   bloodDonationApp: bloodDonationApp,
   bloodHub: bloodHub,
   byts: byts,
+  weatherapp : weatherapp,
+  snaplearn : snaplearn,
+
 };
 export default image;

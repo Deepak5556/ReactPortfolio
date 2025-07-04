@@ -15,18 +15,20 @@ const Projects = () => {
       liveLink: null,
       githubLink: "https://github.com/Deepak5556/cognito",
       status: 0,
-    },{
+    },
+    {
       id: 2,
       title: "SnapLearn",
       description:
         "SnapLearn App is a Flutter-based mobile application that uses image recognition to describe what's in a photo. Users can upload or snap pictures, and the app instantly provides a simple explanation. Designed for learning, accessibility, and fun, it makes visual discovery easy and engaging.",
       image: image.snaplearn,
-      technologies: ["Flutter","Dart","Claude","App Development"],
-      liveLink: "https://www.mediafire.com/file/5esqmnk2fmg8gqy/app-release.apk/file",
+      technologies: ["Flutter", "Dart", "Claude", "App Development"],
+      liveLink:
+        "https://www.mediafire.com/file/5esqmnk2fmg8gqy/app-release.apk/file",
       githubLink: "https://github.com/Deepak5556/SnapLearn",
       status: 1,
     },
-    
+
     {
       id: 3,
       title: "WeatherApp",
@@ -58,7 +60,8 @@ const Projects = () => {
         "A user-friendly Flutter-based Blood Donation App designed to streamline the process of finding blood donors and requesting donations. The app features donor registration, search for nearby donors, request forms, and emergency contact options for quick assistance.",
       image: image.bloodDonationApp,
       technologies: ["Flutter Flow", "Dart", "Firebase"],
-      liveLink: null,
+      liveLink:
+        "https://www.mediafire.com/file/ubexqoygw81pt3j/BloodHub.apk/file",
       githubLink: "https://github.com/Deepak5556/BloodHub-Mobile-App",
       status: 1,
     },

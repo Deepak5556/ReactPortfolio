@@ -12,11 +12,11 @@ const About = () => {
       "JavaScript",
       "React Js",
     ],
-    backend: ["Node.js", "Express.js"],
+    backend: ["Node.js", "Express.js"," .NET"],
     mernStack: ["MongoDB", "Express.js", "React Js", "Node.js"],
     database: ["MySQL", "MongoDB", "Firebase"],
-    appDevelopment: ["Flutter Flow","Flutter","Dart"],
-    problemSolving: ["C", "Java", "Python"],
+    appDevelopment: ["Flutter","Dart","Flutter Flow"],
+    problemSolving: ["C","C#", "Java", "Python"],
   };
 
   const containerVariants = {

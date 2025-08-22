@@ -5,8 +5,19 @@ import image from "../Assets/image";
 
 const Projects = () => {
   const projects = [
-    {
+     {
       id: 1,
+      title: "Job Portal",
+      description:
+        "A full-stack Job Portal built with .NET and C# featuring three roles: Job Seeker, Employer, and Admin. Job Seekers can apply for jobs, Employers can post/manage vacancies, and Admins oversee the system. Powered by Entity Framework, it ensures secure data handling with a clean, responsive UI for a seamless hiring experience.",
+      image: image.JobPortal,
+      technologies: [".NET", "C#","Entity Framework"],
+      liveLink: null,
+      githubLink: "https://github.com/Deepak5556/Todo-List-App-Flutter",
+      status: 0,
+    },
+    {
+      id: 2,
       title: "Cognito",
       description:
         "Cognito is a MERN stack-based online learning platform featuring dual logins for teachers and students. It includes course management, live chat, AI-powered assistance, and a personalized dashboard for seamless learning",
@@ -17,7 +28,7 @@ const Projects = () => {
       status: 0,
     },
     {
-      id: 2,
+      id: 3,
       title: "SnapLearn",
       description:
         "SnapLearn App is a Flutter-based mobile application that uses image recognition to describe what's in a photo. Users can upload or snap pictures, and the app instantly provides a simple explanation. Designed for learning, accessibility, and fun, it makes visual discovery easy and engaging.",
@@ -30,7 +41,7 @@ const Projects = () => {
     },
 
     {
-      id: 3,
+      id: 4,
       title: "WeatherApp",
       description:
         "Developed a cross-platform Weather App using Flutter that displays real-time weather data.Integrated OpenWeatherMap API to fetch current temperature, humidity, and location-based forecasts.Designed a clean, responsive UI for seamless user experience on both Android and iOS.",
@@ -43,7 +54,7 @@ const Projects = () => {
       status: 1,
     },
     {
-      id: 4,
+      id: 5,
       title: "kcedhruva",
       description:
         "The KAT COMMAND team developed kcedhruva.in, the official website for our college's Dhruva event, improving user engagement and accessibility. It offers event details, schedules, and registration features. I'm proud to be part of this team and contribute to its success.",
@@ -54,7 +65,7 @@ const Projects = () => {
       status: 1,
     },
     {
-      id: 5,
+      id: 6,
       title: "Blood Donation App",
       description:
         "A user-friendly Flutter-based Blood Donation App designed to streamline the process of finding blood donors and requesting donations. The app features donor registration, search for nearby donors, request forms, and emergency contact options for quick assistance.",
@@ -66,7 +77,7 @@ const Projects = () => {
       status: 1,
     },
     {
-      id: 6,
+      id: 7,
       title: "Blood Hub Website",
       description:
         "Blood Hub is a PHP and MySQL-based website developed to understand the basics of backend programming and database management. The platform simplifies the process of finding and connecting with blood donors, featuring donor registration, search functionalities, and donation request forms.",
@@ -77,7 +88,7 @@ const Projects = () => {
       status: 1,
     },
     {
-      id: 7,
+      id: 8,
       title: "To-Do App",
       description:
         "A Flutter-based To-Do App that helps users manage their daily tasks effectively. It features task addition, editing, deletion, and a user-friendly interface to keep track of completed and pending tasks.",

@@ -51,9 +51,9 @@ const Hero = () => {
           </h1>
 
           <p className="text-dark mb-8 max-w-lg">
-            Welcome to my official portfolio website, where you can explore my
-            skills, work experience, and all the details about my journey in web
-            development.
+            Welcome to my official portfolio website! Here, you can explore my
+            skills, projects, work experience, and learn more about my journey
+            as a Full Stack Web & Mobile App Developer and UI/UX Designer.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">

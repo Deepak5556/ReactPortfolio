@@ -12,11 +12,11 @@ const About = () => {
       "JavaScript",
       "React Js",
     ],
-    backend: ["Node.js", "Express.js"," .NET"],
+    backend: ["Node.js", "Express.js", " .NET"],
     mernStack: ["MongoDB", "Express.js", "React Js", "Node.js"],
     database: ["MySQL", "MongoDB", "Firebase"],
-    appDevelopment: ["Flutter","Dart","Flutter Flow"],
-    problemSolving: ["C","C#", "Java", "Python"],
+    appDevelopment: ["Flutter", "Dart", "Flutter Flow"],
+    problemSolving: ["C", "C#", "Java", "Python"],
   };
 
   const containerVariants = {
@@ -64,16 +64,21 @@ const About = () => {
               My Introduction
             </h3>
             <p className="text-gray-700 mb-8">
-              I'm a Full Stack Web Developer and UI/UX Designer with experience
-              in both front-end and back-end development. I work with languages
-              like C, Java, and Python, and I’m skilled in HTML, CSS, Bootstrap,
-              Tailwind CSS, and JavaScript. I use ReactJS for building dynamic
-              user interfaces and have hands-on experience with the MERN Stack
-              (MongoDB, Express.js, React, Node.js). I also work with MySQL,
-              MongoDB, and FlutterFlow. From designing clean, responsive user
-              interfaces to building and managing full-stack web applications, I
-              focus on creating visually appealing and functional digital
-              experiences.
+              I am a Full Stack Web & Mobile App Developer and UI/UX Designer
+              with expertise in creating responsive, user-friendly, and
+              efficient digital solutions. I have strong proficiency in C, Java,
+              and Python, along with front-end technologies such as HTML, CSS,
+              Bootstrap, Tailwind CSS, JavaScript, and ReactJS. On the back-end,
+              I work with the MERN Stack (MongoDB, Express.js, React, Node.js)
+              as well as MySQL and MongoDB. 
+              <br /> <br />
+              In addition to web development, I
+              have experience in mobile application development using
+              FlutterFlow, enabling me to build cross-platform apps with modern,
+              clean interfaces. With a passion for UI/UX design, I focus on
+              delivering visually appealing, intuitive, and high-performance
+              applications that enhance user experience while aligning with
+              business needs.
             </p>
             <a
               href="/Resume.pdf"

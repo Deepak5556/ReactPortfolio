@@ -113,7 +113,7 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
             ))}
             <li>
               <a
-                href="/Resume.pdf"
+            href={resume}
                 rel="noopener noreferrer"
                 className="btn btn-primary inline-block  items-center space-x-2"
               >

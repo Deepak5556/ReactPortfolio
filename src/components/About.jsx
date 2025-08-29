@@ -1,6 +1,7 @@
 import React from "react";
 import { FileText } from "lucide-react";
 import { motion } from "framer-motion";
+import resume from "../Assets/DeepakkumarV.pdf";
 
 const About = () => {
   const skills = {
@@ -81,7 +82,7 @@ const About = () => {
               business needs.
             </p>
             <a
-              href="/Resume.pdf"
+              href={resume}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary inline-flex"

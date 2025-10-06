@@ -7,6 +7,7 @@ import byts from "../Assets/byts.png";
 import weatherapp from "../Assets/weatherapp.png"
 import snaplearn from "../Assets/snaplearn.png"
 import JobPortal from "../Assets/JobPortal.jpg"
+import ProfileImage from "../Assets/Profile/ProfileImage.jpg"
 const image = {
   dhruva: dhruva,
   cognito: cognito,
@@ -16,7 +17,8 @@ const image = {
   byts: byts,
   weatherapp : weatherapp,
   snaplearn : snaplearn,
-  JobPortal : JobPortal
+  JobPortal : JobPortal,
+  ProfileImg :ProfileImage
 
 };
 export default image;

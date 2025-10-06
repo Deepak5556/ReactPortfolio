@@ -10,7 +10,7 @@ import {
   FileText,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import deepak from "../Assets/Deepak.png";
+import deepak from "../Assets/Profile/ProfileImage.jpg";
 import resume from "../Assets/DeepakkumarV.pdf";
 
 const Hero = () => {

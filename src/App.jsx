@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import MyWork from "./components/Mywork";
 import Certificate from "./components/Certificate";
 import Internship from "./components/Internship";
+import Education from "./components/Education";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,6 +32,7 @@ function App() {
               element={
                 <>
                   <Hero />
+                  <Education/>
                   <About />
                   <MyWork />
                   <Contact />
@@ -40,6 +42,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/certificate" element={<Certificate />} />
             <Route path="/internship" element={<Internship />} />
+            <Route path="/education" element={<Education/>}/>
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mywork" element={<MyWork />} />

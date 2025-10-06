@@ -5,6 +5,7 @@ import { Instagram, Linkedin, Github, Dribbble } from "lucide-react";
 const Footer = () => {
   const navLinks = [
     { name: "Home", to: "home" },
+    { name: "Education", to: "education" },
     { name: "About", to: "about" },
     { name: "Projects", to: "projects" },
     { name: "Contact", to: "contact" },
@@ -68,6 +69,8 @@ const Footer = () => {
           </div>
 
           <div className="text-center text-gray-500 text-sm">
+            <p>Last Update : October 2025</p>
+            <br />
             <p>
               Copyright &copy; {new Date().getFullYear()}{" "}
               <span className="text-primary">Deepakkumar</span> - All rights

@@ -24,6 +24,8 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Education", path: "/education" },
+
     // { name: "Projects", path: "/projects" },
     // { name: "Certificates", path: "/certificate" },
 

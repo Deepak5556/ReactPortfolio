@@ -67,7 +67,7 @@ const About = () => {
             <p className="text-gray-700 mb-8">
               I am a Full Stack Web & Mobile App Developer and UI/UX Designer
               with expertise in creating responsive, user-friendly, and
-              efficient digital solutions. I have strong proficiency in C, Java,
+              efficient digital solutions. I have strong proficiency in Java,
               and Python, along with front-end technologies such as HTML, CSS,
               Bootstrap, Tailwind CSS, JavaScript, and ReactJS. On the back-end,
               I work with the MERN Stack (MongoDB, Express.js, React, Node.js)

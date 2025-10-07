@@ -14,7 +14,7 @@ const About = () => {
       "React Js",
     ],
     backend: ["Node.js", "Express.js", " .NET"],
-    mernStack: ["MongoDB", "Express.js", "React Js", "Node.js"],
+    // mernStack: ["MongoDB", "Express.js", "React Js", "Node.js"],
     database: ["MySQL", "MongoDB", "Firebase"],
     appDevelopment: ["Flutter", "Dart", "Flutter Flow"],
     problemSolving: ["C#", "Java"],

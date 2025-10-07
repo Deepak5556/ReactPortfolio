@@ -17,7 +17,7 @@ const About = () => {
     mernStack: ["MongoDB", "Express.js", "React Js", "Node.js"],
     database: ["MySQL", "MongoDB", "Firebase"],
     appDevelopment: ["Flutter", "Dart", "Flutter Flow"],
-    problemSolving: ["C", "C#", "Java"],
+    problemSolving: ["C#", "Java"],
   };
 
   const containerVariants = {

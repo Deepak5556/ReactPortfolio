@@ -12,9 +12,21 @@ const internships = [
     description:
       "I completed an internship where I learned the basics of Python programming . I  practiced writing simple code using loops, functions, and data types. ",
     image: image.byts,
-    certificateLink: "#",
+    certificateLink: "",
     companyLink: "https://byts.co.in/",
   },
+  {
+  id: 2,
+  company: "Interface Technology",
+  role: "App Developer Intern",
+  period: "Aug 2025 - Present",
+  description:
+    "Currently working as an App Developer Intern at Interface Technology. I’m gaining hands-on experience in building mobile and web applications, learning about front-end design, backend integration, and real-world project workflows.",
+  image: image.Interface, // make sure you have this image imported in your image.js
+  certificateLink: "", // leave empty for now since it’s ongoing
+  companyLink: "https://interfacedigitaltech.com/", // replace with actual company link if different
+},
+
 ];
 
 const Internship = () => {

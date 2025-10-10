@@ -1,36 +1,27 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import { Link } from "react-scroll";
-import {
-  ChevronDown,
-  Instagram,
-  Linkedin,
-  Github,
-  Dribbble,
-  FileText,
-} from "lucide-react";
 import { motion } from "framer-motion";
-import deepak from "../Assets/Profile/ProfileImage.jpg";
+import deepak from "../Assets/Profile/Deepakkumar V.webp";
 import resume from "../Assets/DeepakkumarV.pdf";
+import { Instagram, Linkedin, Github, Dribbble, FileText } from "lucide-react";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center pt-16"
+      className="min-h-screen flex flex-col justify-center pt-16 relative"
     >
       <div className="flex flex-col md:flex-row items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="w-full md:w-1/2 order-2 md:order-1 mt-10 md:mt-0"
-        >
-          {/* <div className="mb-4">
-            <span className="bg-primary text-white text-xs px-3 py-1 rounded-md">Full Stack Developer</span>
-          </div> */}
 
-          <div className="text-xl md:text-2xl font-medium mb-6 h-8">
+        {/* Left Section */}
+        <div className="w-full md:w-1/2 order-2 md:order-1 mt-10 md:mt-0">
+          {/* Type Animation */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-xl md:text-2xl font-medium mb-6 h-8"
+          >
             <TypeAnimation
               sequence={[
                 "Web Developer",
@@ -45,98 +36,119 @@ const Hero = () => {
               repeat={Infinity}
               className="text-primary"
             />
-          </div>
+          </motion.div>
+
+          {/* Hero Heading (LCP) */}
           <h1 className="text-4xl md:text-5xl font-bold text-dark mb-4">
             I'm <span className="text-primary">Deepakkumar</span>
           </h1>
 
+          {/* Intro Paragraph */}
           <p className="text-dark mb-8 max-w-lg">
             Welcome to my official portfolio website! Here, you can explore my
             skills, projects, work experience, and learn more about my journey
             as a Full Stack Web & Mobile App Developer and UI/UX Designer.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-12">
+          {/* Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-wrap gap-4 mb-12"
+          >
             <a
               href={resume}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View Deepak’s Resume"
               className="btn btn-primary"
             >
-              View Resume <FileText size={18} />
+              View Resume <FileText size={18} aria-hidden="true" />
             </a>
+
             <button
               className="btn"
               onClick={() =>
                 window.open("https://linktr.ee/deepakkumar007", "_blank")
               }
+              aria-label="Open Deepak’s Social Media Links"
             >
               Social Media
             </button>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-6">
+          {/* Social Icons */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex gap-6"
+            role="navigation"
+            aria-label="Social media links"
+          >
             <a
               href="https://www.instagram.com/insta_boy_deepak__"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram"
               className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-primary transition-colors"
             >
-              <Instagram size={20} />
+              <Instagram size={20} aria-hidden="true" focusable="false" />
             </a>
+
             <a
-              href="https://www.linkedin.com/in/deepakkumarv5556"
+              href="https://www.linkedin.com/in/deepak5556"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-primary transition-colors"
             >
-              <Linkedin size={20} />
+              <Linkedin size={20} aria-hidden="true" focusable="false" />
             </a>
 
             <a
               href="https://github.com/Deepak5556"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
               className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-primary transition-colors"
             >
-              <Github size={20} />
+              <Github size={20} aria-hidden="true" focusable="false" />
             </a>
-          </div>
-        </motion.div>
 
+            <a
+              href="https://dribbble.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Dribbble"
+              className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:text-primary transition-colors"
+            >
+              <Dribbble size={20} aria-hidden="true" focusable="false" />
+            </a>
+          </motion.div>
+        </div>
+
+        {/* Right Section (Profile Image) */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="w-full md:w-1/2 flex justify-center order-1 md:order-2"
         >
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden animate-float border-4 border-primary">
+          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden animate-float border-4 border-primary shadow-lg">
             <img
               src={deepak}
-              alt="Deepakkumar"
+              alt="Portrait of Deepakkumar"
+              width={400}
+              height={400}
+              loading="eager"
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>
         </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-      >
-        {/* <Link
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-          className="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md cursor-pointer hover:bg-gray-100 transition-colors"
-        >
-          <ChevronDown size={24} className="text-primary animate-bounce" />
-        </Link> */}
-      </motion.div>
     </section>
   );
 };

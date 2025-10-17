@@ -1,14 +1,17 @@
-import dhruva from "../Assets/dhruva.png";
-import cognito from "../Assets/cognito.png";
-import todoApp from "../Assets/todoApp.png";
-import bloodDonationApp from "../Assets/bloodDonationApp.jpg";
-import bloodHub from "../Assets/bloodHub.jpg";
-import byts from "../Assets/byts.png";
-import weatherapp from "../Assets/weatherapp.png"
-import snaplearn from "../Assets/snaplearn.png"
-import JobPortal from "../Assets/JobPortal.jpg"
+//Project Section Images
+import dhruva from "../Assets/Project/dhruva.webp";
+import cognito from "../Assets/Project/cognito.webp";
+import todoApp from "../Assets/Project/todoApp.webp";
+import bloodDonationApp from "../Assets/Project/bloodDonationApp.webp";
+import bloodHub from "../Assets/Project/bloodHub.webp";
+import weatherapp from "../Assets/Project/weatherapp.webp"
+import snaplearn from "../Assets/Project/snaplearn.webp"
+import JobPortal from "../Assets/Project/JobPortal.webp"
+//Hero Section Profile Images
 import ProfileImage from "../Assets/Profile/ProfileImage.jpg"
-import Interface from "../Assets/Interface.png"
+//Intership Section Images
+import Interface from "../Assets/Internship/Interface.webp"
+import byts from "../Assets/Internship/byts.webp";
 const image = {
   dhruva: dhruva,
   cognito: cognito,
@@ -21,6 +24,5 @@ const image = {
   JobPortal : JobPortal,
   ProfileImg :ProfileImage,
   Interface : Interface
-
 };
 export default image;

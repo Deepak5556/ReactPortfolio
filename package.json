@@ -41,5 +41,18 @@
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "vite": "^6.3.5"
-  }
+  },
+  "description": "",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deepak5556/ReactPortfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deepak5556/ReactPortfolio/issues"
+  },
+  "homepage": "https://github.com/Deepak5556/ReactPortfolio#readme"
 }

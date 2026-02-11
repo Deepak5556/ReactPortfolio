@@ -1,45 +1,43 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Award, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import image from "../Assets/image";
+import { handleImageError } from "../utils/errorHandling";
+
+const certificates = [
+  {
+    id: 1,
+    title: "Full Stack Web Development",
+    issuer: "Coursera",
+    description:
+      "Completed an intensive Full Stack Web Development specialization covering React, Node.js, MongoDB, and cloud deployment.",
+    image: image.fullStack,
+    date: "March 2024",
+    certificateLink: "https://coursera.org/verify/your-certificate-id",
+  },
+  {
+    id: 2,
+    title: "Flutter & Dart Bootcamp",
+    issuer: "Udemy",
+    description:
+      "Learned Flutter and Dart for cross-platform mobile app development, building multiple real-world projects.",
+    image: image.flutterBootcamp,
+    date: "January 2024",
+    certificateLink: "https://udemy.com/certificate/your-certificate-id",
+  },
+  {
+    id: 3,
+    title: "Machine Learning",
+    issuer: "Coursera",
+    description:
+      "Completed Andrew Ng’s Machine Learning course, covering supervised and unsupervised learning, best practices, and real-world applications.",
+    image: image.mlCertificate,
+    date: "December 2023",
+    certificateLink: "https://coursera.org/verify/your-certificate-id",
+  },
+];
 
 const Certificate = () => {
-  const certificates = [
-    {
-      id: 1,
-      title: "Full Stack Web Development",
-      issuer: "Coursera",
-      description:
-        "Completed an intensive Full Stack Web Development specialization covering React, Node.js, MongoDB, and cloud deployment.",
-      image: image.fullStack,
-      date: "March 2024",
-      certificateLink: "https://coursera.org/verify/your-certificate-id",
-    },
-    {
-      id: 2,
-      title: "Flutter & Dart Bootcamp",
-      issuer: "Udemy",
-      description:
-        "Learned Flutter and Dart for cross-platform mobile app development, building multiple real-world projects.",
-      image: image.flutterBootcamp,
-      date: "January 2024",
-      certificateLink: "https://udemy.com/certificate/your-certificate-id",
-    },
-    {
-      id: 3,
-      title: "Machine Learning",
-      issuer: "Coursera",
-      description:
-        "Completed Andrew Ng’s Machine Learning course, covering supervised and unsupervised learning, best practices, and real-world applications.",
-      image: image.mlCertificate,
-      date: "December 2023",
-      certificateLink: "https://coursera.org/verify/your-certificate-id",
-    },
-  ];
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const handleCertificateClick = (event, certificateLink) => {
     if (!certificateLink) {
@@ -92,6 +90,7 @@ const Certificate = () => {
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.5 }}
+                onError={handleImageError}
               />
             </div>
             <div className="p-4 flex flex-col flex-grow">
@@ -117,9 +116,8 @@ const Certificate = () => {
                   href={certificate.certificateLink || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`btn btn-primary btn-sm w-full flex justify-center items-center gap-2 text-xs py-2 rounded ${
-                    !certificate.certificateLink ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
+                  className={`btn btn-primary btn-sm w-full flex justify-center items-center gap-2 text-xs py-2 rounded ${!certificate.certificateLink ? "opacity-50 cursor-not-allowed" : ""
+                    }`}
                   onClick={(e) =>
                     handleCertificateClick(e, certificate.certificateLink)
                   }

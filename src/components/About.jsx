@@ -3,41 +3,42 @@ import { FileText } from "lucide-react";
 import { motion } from "framer-motion";
 import resume from "../Assets/DeepakkumarV.pdf";
 
+const skills = {
+  frontend: [
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "Tailwind",
+    "JavaScript",
+    "React Js",
+  ],
+  backend: ["Node.js", "Express.js", " .NET"],
+  // mernStack: ["MongoDB", "Express.js", "React Js", "Node.js"],
+  database: ["MySQL", "MongoDB", "Firebase"],
+  appDevelopment: ["Flutter", "Dart", "Flutter Flow"],
+  problemSolving: ["C#", "Java"],
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5 },
+  },
+};
+
 const About = () => {
-  const skills = {
-    frontend: [
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "Tailwind",
-      "JavaScript",
-      "React Js",
-    ],
-    backend: ["Node.js", "Express.js", " .NET"],
-    // mernStack: ["MongoDB", "Express.js", "React Js", "Node.js"],
-    database: ["MySQL", "MongoDB", "Firebase"],
-    appDevelopment: ["Flutter", "Dart", "Flutter Flow"],
-    problemSolving: ["C#", "Java"],
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5 },
-    },
-  };
 
   return (
     <section id="about" className="py-20">
@@ -71,7 +72,7 @@ const About = () => {
               and Python, along with front-end technologies such as HTML, CSS,
               Bootstrap, Tailwind CSS, JavaScript, and ReactJS. On the back-end,
               I work with the MERN Stack (MongoDB, Express.js, React, Node.js)
-              as well as MySQL and MongoDB. 
+              as well as MySQL and MongoDB.
               <br /> <br />
               In addition to web development, I
               have experience in mobile application development using

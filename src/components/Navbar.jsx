@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, FileText } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import resume from "../Assets/DeepakkumarV.pdf";
 
 const Navbar = ({ isMenuOpen, toggleMenu }) => {
@@ -25,10 +25,6 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Education", path: "/education" },
-
-    // { name: "Projects", path: "/projects" },
-    // { name: "Certificates", path: "/certificate" },
-
     { name: "My Work", path: "/mywork" },
     { name: "Contact", path: "/contact" },
   ];
@@ -38,9 +34,8 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full z-50 py-5 px-4 md:px-8 lg:px-16 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed w-full z-50 py-5 px-4 md:px-8 lg:px-16 transition-all duration-300 ${scrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="nav-logo">
@@ -59,11 +54,8 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
               <li key={link.name}>
                 <Link
                   to={link.path}
-                  className={`text-dark hover:text-primary font-medium cursor-pointer transition-colors ${
-                    location.pathname === link.path
-                      ? "text-primary font-bold"
-                      : ""
-                  }`}
+                  className={`text-dark hover:text-primary font-medium cursor-pointer transition-colors ${location.pathname === link.path ? "text-primary font-bold" : ""
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -89,42 +81,42 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden absolute top-full left-0 w-full bg-white shadow-md py-5 px-4"
-        >
-          <ul className="flex flex-col space-y-4">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  to={link.path}
-                  onClick={toggleMenu}
-                  className={`text-dark hover:text-primary font-medium block py-2 ${
-                    location.pathname === link.path
-                      ? "text-primary font-bold"
-                      : ""
-                  }`}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden absolute top-full left-0 w-full bg-white shadow-md py-5 px-4"
+          >
+            <ul className="flex flex-col space-y-4">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
+                    onClick={toggleMenu}
+                    className={`text-dark hover:text-primary font-medium block py-2 ${location.pathname === link.path ? "text-primary font-bold" : ""
+                      }`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <a
+                  href={resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary inline-block items-center space-x-2"
                 >
-                  {link.name}
-                </Link>
+                  Download CV <FileText size={18} />
+                </a>
               </li>
-            ))}
-            <li>
-              <a
-            href={resume}
-                rel="noopener noreferrer"
-                className="btn btn-primary inline-block  items-center space-x-2"
-              >
-                Download CV <FileText size={18} />
-              </a>
-            </li>
-          </ul>
-        </motion.div>
-      )}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };

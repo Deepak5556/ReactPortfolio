@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Briefcase, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import image from "../Assets/image.js";
+import { handleImageError } from "../utils/errorHandling";
 
 const internships = [
   {
@@ -29,9 +30,6 @@ const internships = [
 ];
 
 const Internship = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const handleCertificateClick = (event, link) => {
     if (!link) {
@@ -86,6 +84,7 @@ const Internship = () => {
                 src={intern.image}
                 alt={intern.company}
                 className="h-20 sm:h-24 md:h-28 w-auto object-contain"
+                onError={handleImageError}
               />
             </div>
 
@@ -116,11 +115,10 @@ const Internship = () => {
                   href={intern.certificateLink || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center justify-center gap-2 text-sm font-medium rounded-lg px-4 py-2 transition-all duration-300 w-full ${
-                    intern.certificateLink
-                      ? "bg-blue-600 text-white hover:bg-blue-700"
-                      : "bg-gray-300 text-gray-600 cursor-not-allowed"
-                  }`}
+                  className={`flex items-center justify-center gap-2 text-sm font-medium rounded-lg px-4 py-2 transition-all duration-300 w-full ${intern.certificateLink
+                    ? "bg-blue-600 text-white hover:bg-blue-700"
+                    : "bg-gray-300 text-gray-600 cursor-not-allowed"
+                    }`}
                   onClick={(e) =>
                     handleCertificateClick(e, intern.certificateLink)
                   }

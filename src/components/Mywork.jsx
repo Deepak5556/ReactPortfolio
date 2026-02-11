@@ -32,12 +32,14 @@ const MyWork = () => {
               </h3>
             </motion.div>
           </Link>
-          <motion.div whileHover={{ y: -10 }} className="project-card p-10">
-            <Award size={50} className="text-primary mb-4" />
-            <h3 className="text-xl font-semibold text-dark mb-2">
-              Certificates
-            </h3>
-          </motion.div>
+          <Link to="/certificate">
+            <motion.div whileHover={{ y: -10 }} className="project-card p-10">
+              <Award size={50} className="text-primary mb-4" />
+              <h3 className="text-xl font-semibold text-dark mb-2">
+                Certificates
+              </h3>
+            </motion.div>
+          </Link>
         </div>
       </div>
     </div>

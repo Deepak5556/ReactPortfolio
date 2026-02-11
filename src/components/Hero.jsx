@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import deepak from "../Assets/Profile/Deepakkumar V.webp";
 import resume from "../Assets/DeepakkumarV.pdf";
 import { Instagram, Linkedin, Github, Dribbble, FileText } from "lucide-react";
+import { handleImageError } from "../utils/errorHandling";
 
 const Hero = () => {
   return (
@@ -145,6 +146,7 @@ const Hero = () => {
               loading="eager"
               decoding="async"
               className="w-full h-full object-cover"
+              onError={handleImageError}
             />
           </div>
         </motion.div>

@@ -7,38 +7,27 @@ import { handleImageError } from "../utils/errorHandling";
 const certificates = [
   {
     id: 1,
-    title: "Full Stack Web Development",
-    issuer: "Coursera",
+    title: "Python Basics",
+    issuer: "Byts",
     description:
-      "Completed an intensive Full Stack Web Development specialization covering React, Node.js, MongoDB, and cloud deployment.",
-    image: image.fullStack,
-    date: "March 2024",
-    certificateLink: "https://coursera.org/verify/your-certificate-id",
+      "Completed a Python Basics internship at Byts, gaining hands-on experience with core concepts like data types, loops, conditionals, and functions.",
+    image: image.byts,
+    date: "Oct 2024",
+    certificateLink: image.bytesCertificate, // Placeholder for actual certificate link
   },
   {
     id: 2,
-    title: "Flutter & Dart Bootcamp",
-    issuer: "Udemy",
+    title: "App Deveploper Internship",
+    issuer: "Interface Technologies",
     description:
-      "Learned Flutter and Dart for cross-platform mobile app development, building multiple real-world projects.",
-    image: image.flutterBootcamp,
-    date: "January 2024",
-    certificateLink: "https://udemy.com/certificate/your-certificate-id",
-  },
-  {
-    id: 3,
-    title: "Machine Learning",
-    issuer: "Coursera",
-    description:
-      "Completed Andrew Ng’s Machine Learning course, covering supervised and unsupervised learning, best practices, and real-world applications.",
-    image: image.mlCertificate,
-    date: "December 2023",
-    certificateLink: "https://coursera.org/verify/your-certificate-id",
+      "Completed my App Developer Internship at Interface Technology, gaining hands-on experience in building mobile and web applications, front-end design, backend integration, and real-world project workflows.",
+    image: image.Interface,
+    date: "Feb 2026",
+    certificateLink: image.interfaceCertificate,
   },
 ];
 
 const Certificate = () => {
-
   const handleCertificateClick = (event, certificateLink) => {
     if (!certificateLink) {
       event.preventDefault();
@@ -78,17 +67,20 @@ const Certificate = () => {
           <motion.div
             key={certificate.id}
             className="bg-white rounded-xl shadow-md overflow-hidden max-w-sm mx-auto flex flex-col"
-            whileHover={{ scale: 1.03, boxShadow: "0 10px 20px rgba(0,0,0,0.12)" }}
+            whileHover={{
+              scale: 1.03,
+              boxShadow: "0 10px 20px rgba(0,0,0,0.12)",
+            }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="h-32 overflow-hidden">
+            <div className="h-32 overflow-hidden flex items-center justify-center bg-white">
               <motion.img
                 src={certificate.image}
                 alt={certificate.title}
-                className="w-full h-full object-cover"
-                whileHover={{ scale: 1.1 }}
+                className="w-full h-full object-contain"
+                whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.5 }}
                 onError={handleImageError}
               />
@@ -106,7 +98,8 @@ const Certificate = () => {
                   : certificate.description}
               </p>
               <div className="mb-1 text-xs text-gray-700">
-                <span className="font-medium">Issuer:</span> {certificate.issuer}
+                <span className="font-medium">Issuer:</span>{" "}
+                {certificate.issuer}
               </div>
               <div className="mb-4 text-xs text-gray-700">
                 <span className="font-medium">Date:</span> {certificate.date}
@@ -116,8 +109,11 @@ const Certificate = () => {
                   href={certificate.certificateLink || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`btn btn-primary btn-sm w-full flex justify-center items-center gap-2 text-xs py-2 rounded ${!certificate.certificateLink ? "opacity-50 cursor-not-allowed" : ""
-                    }`}
+                  className={`btn btn-primary btn-sm w-full flex justify-center items-center gap-2 text-xs py-2 rounded ${
+                    !certificate.certificateLink
+                      ? "opacity-50 cursor-not-allowed"
+                      : ""
+                  }`}
                   onClick={(e) =>
                     handleCertificateClick(e, certificate.certificateLink)
                   }

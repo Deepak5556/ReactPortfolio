@@ -12,6 +12,8 @@ import ProfileImage from "../Assets/Profile/ProfileImage.jpg"
 //Intership Section Images
 import Interface from "../Assets/Internship/Interface.webp"
 import byts from "../Assets/Internship/byts.webp";
+import bytesCertificate from "../Assets/Certificates/bytesCertificate.jpg";
+import interfaceCertificate from "../Assets/Certificates/interfaceCertificate.jpeg";
 const image = {
   dhruva: dhruva,
   cognito: cognito,
@@ -23,6 +25,8 @@ const image = {
   snaplearn : snaplearn,
   JobPortal : JobPortal,
   ProfileImg :ProfileImage,
-  Interface : Interface
+  Interface : Interface,
+  bytesCertificate : bytesCertificate,
+  interfaceCertificate : interfaceCertificate
 };
 export default image;

@@ -13,6 +13,7 @@ import Certificate from "./components/Certificate";
 import Internship from "./components/Internship";
 import Education from "./components/Education";
 import ScrollToTop from "./components/ScrollToTop";
+import DynamicBreadcrumbs from "./components/DynamicBreadcrumbs";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,6 +33,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <DynamicBreadcrumbs />
       <div className="font-poppins relative">
 
         {/* Navbar */}

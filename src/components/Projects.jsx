@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Briefcase, Users, Award, ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";

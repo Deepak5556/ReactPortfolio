@@ -41,7 +41,7 @@ const Hero = () => {
 
           {/* Hero Heading (LCP) */}
           <h1 className="text-4xl md:text-5xl font-bold text-dark mb-4">
-            I'm <span className="text-primary">Deepakkumar</span>
+            I'm <span className="text-primary">Deepakkumar V</span>
           </h1>
 
           {/* Intro Paragraph */}
